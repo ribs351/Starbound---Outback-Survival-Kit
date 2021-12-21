@@ -1,0 +1,24 @@
+{
+    "projectileName": "standardhuntingbullet",
+    "image": "standardhuntingbullet.png",
+    "physics": "laser",
+    "animationCycle": 0.25,
+    "frameNumber": 1,
+    "damageKind": "bow",
+    "pointLight": false,
+    "flippable": true,
+    "periodicActions": [],
+    "actionOnReap": [{
+            "action": "config",
+            "file": "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+        }
+    ],
+    "statusEffects": [{
+            "effect": "paralysis",
+            "duration": 0.1
+        }
+    ],
+    "power": 5.0,
+    "speed": 150,
+    "knockback": 0
+}

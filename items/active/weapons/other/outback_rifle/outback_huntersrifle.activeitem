@@ -1,0 +1,397 @@
+{
+    "itemName": "outback_huntersrifle",
+    "price": 1500,
+    "inventoryIcon": "outback_huntersrifle.png:cock.1",
+    "maxStack": 1,
+    "rarity": "Legendary",
+    "description": "Because sometimes, you make do with what you have.",
+    "shortdescription": "Survivalist's Rifle",
+    "level": 5,
+    "tooltipKind": "base",
+    "category": "^green;Bushmen",
+    "itemTags": ["weapon", "ranged", "rifle"],
+    "twoHanded": true,
+
+    "animation": "/items/active/weapons/ranged/gun.animation",
+    "animationParts": {
+        "butt": "",
+        "middle": "outback_huntersrifle.png:cock.1",
+        "barrel": "",
+        "blade": "",
+        "handle": "",
+        "muzzleFlash": "/items/active/weapons/ranged/muzzleflash.png"
+    },
+    "animationCustom": {
+        "animatedParts": {
+            "stateTypes": {
+                "firing": {
+                    "default": "off",
+                    "states": {
+                        "off": {},
+                        "fire": {
+                            "frames": 2,
+                            "cycle": 0.07,
+                            "mode": "transition",
+                            "transition": "off"
+                        },
+                        "reload": {
+                            "frames": 2,
+                            "cycle": 0.15,
+                            "mode": "transition",
+                            "transition": "off"
+                        }
+                    }
+                },
+                "swoosh": {
+                    "default": "idle",
+                    "states": {
+                        "idle": {},
+                        "fire": {
+                            "frames": 3,
+                            "cycle": 0.08,
+                            "mode": "transition",
+                            "transition": "idle"
+                        }
+                    }
+                }
+            },
+
+            "parts": {
+                "butt": {
+                    "properties": {
+                        "centered": true,
+                        "image": "<partImage><paletteSwaps>",
+                        "offset": [0, 0], // x offset is set dynamically
+                        "transformationGroups": ["weapon"]
+                    }
+                },
+                "middle": {
+                    "properties": {
+                        "centered": true,
+                        "image": "outback_huntersrifle.png:cock.1",
+                        "offset": [0, 0], // x offset is set dynamically
+                        "transformationGroups": ["weapon"]
+                    },
+                    "partStates": {
+                        "firing": {
+                            "reload": {
+                                "properties": {
+                                    "image": "outback_huntersrifle.png:cock.<frame>"
+                                }
+                            }
+                        }
+                    }
+                },
+                "barrel": {
+                    "properties": {
+                        "centered": true,
+                        "image": "<partImage><paletteSwaps>",
+                        "offset": [0, 0], // x offset is set dynamically
+                        "transformationGroups": ["weapon"]
+                    }
+                },
+                "muzzleFlash": {
+                    "properties": {
+                        "zLevel": -1,
+                        "centered": true,
+                        "offset": [0.75, 0],
+                        "fullbright": true,
+                        "transformationGroups": ["muzzle"]
+                    },
+
+                    "partStates": {
+                        "firing": {
+                            "fire": {
+                                "properties": {
+                                    "image": "<partImage>:<variant>.<frame>"
+                                }
+                            }
+                        }
+                    }
+                },
+                "blade": {
+                    "properties": {
+                        "zLevel": 1,
+                        "centered": true,
+                        "image": "<partImage><paletteSwaps>",
+                        "offset": [0.0, 0.0],
+                        "transformationGroups": ["weapon"],
+                        "damageArea": [[0, -0.5], [-0.75, 1.0], [-0.75, 2.75], [0, 4.25], [0.75, 2.75], [0.75, 1.0]]
+                    }
+                },
+                "handle": {
+                    "properties": {
+                        "zLevel": 0,
+                        "centered": true,
+                        "image": "<partImage><paletteSwaps>",
+                        "offset": [0.0, 0.0],
+                        "transformationGroups": ["weapon"]
+                    }
+                },
+                "swoosh": {
+                    "properties": {
+                        "zLevel": -1,
+                        "centered": true,
+                        "offset": [0.0, -0.3],
+                        "transformationGroups": ["muzzle"]
+                    },
+
+                    "partStates": {
+                        "swoosh": {
+                            "idle": {
+                                "properties": {
+                                    "image": ""
+                                }
+                            },
+                            "fire": {
+                                "properties": {
+                                    "image": "/items/active/weapons/melee/spear/swoosh/<elementalType>swoosh.png:<frame>",
+                                    "damageArea": [[-3.5, 0], [-1, 1], [1, 1], [4, 0], [1, -1], [-1, -1]]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "transformationGroups": {
+            "weapon": {},
+            "swoosh": {}
+        },
+
+        "particleEmitters": {
+            "muzzleFlash": {
+                "transformationGroups": ["muzzle"],
+                "offsetRegion": [0, 0, 0, 0],
+                "particles": [{
+                        "particle": "firestormflame"
+                    }, {
+                        "particle": "firestormflame3"
+                    }, {
+                        "particle": "firestormflame2"
+                    }, {
+                        "particle": "rocketbarrelpuff"
+                    }, {
+                        "particle": "rocketbarrelpuff"
+                    }, {
+                        "particle": "rocketbarrelpuff"
+                    }
+                ]
+            },
+            "physicalswoosh": {
+                "active": false,
+                "transformationGroups": ["swoosh"],
+                "emissionRate": 60,
+                "offsetRegion": [3.5, -1.0, 7.5, 1.0],
+                "particles": []
+            },
+            "fireswoosh": {
+                "active": false,
+                "transformationGroups": ["swoosh"],
+                "emissionRate": 60,
+                "offsetRegion": [3.5, -1.0, 7.5, 1.0],
+                "particles": [{
+                        "particle": "fireswoosh1"
+                    }, {
+                        "particle": "fireswoosh2"
+                    }, {
+                        "particle": "fireswoosh3"
+                    }, {
+                        "particle": "fireswoosh1"
+                    }, {
+                        "particle": "fireswoosh2"
+                    }, {
+                        "particle": "fireswoosh3"
+                    }
+                ]
+            },
+            "electricswoosh": {
+                "active": false,
+                "transformationGroups": ["swoosh"],
+                "emissionRate": 60,
+                "offsetRegion": [3.5, -1.0, 7.5, 1.0],
+                "particles": [{
+                        "particle": "electricswoosh1"
+                    }, {
+                        "particle": "electricswoosh2"
+                    }, {
+                        "particle": "electricswoosh2"
+                    }
+                ]
+            },
+            "iceswoosh": {
+                "active": false,
+                "transformationGroups": ["swoosh"],
+                "emissionRate": 60,
+                "offsetRegion": [3.5, -1.0, 7.5, 1.0],
+                "particles": [{
+                        "particle": "iceswoosh1"
+                    }, {
+                        "particle": "iceswoosh2"
+                    }, {
+                        "particle": "iceswoosh3"
+                    }, {
+                        "particle": "iceswoosh1"
+                    }, {
+                        "particle": "iceswoosh2"
+                    }, {
+                        "particle": "iceswoosh3"
+                    }
+                ]
+            },
+            "poisonswoosh": {
+                "active": false,
+                "transformationGroups": ["swoosh"],
+                "emissionRate": 60,
+                "offsetRegion": [3.5, -1.0, 7.5, 1.0],
+                "particles": [{
+                        "particle": "poisonswoosh1"
+                    }, {
+                        "particle": "poisonswoosh2"
+                    }, {
+                        "particle": "fireswoosh2"
+                    }, {
+                        "particle": "poisonswoosh1"
+                    }, {
+                        "particle": "poisonswoosh2"
+                    }, {
+                        "particle": "fireswoosh2"
+                    }
+                ]
+            }
+        },
+        "sounds": {
+            "fire": ["/sfx/gun/sniper1.ogg", "/sfx/gun/sniper2.ogg", "/sfx/gun/sniper3.ogg", "/sfx/gun/sniper4.ogg"],
+            "lever": ["/sfx/gun/lever.ogg"],
+            "altWindup": ["/sfx/gun/draw.ogg"]
+        }
+    },
+	"radioMessagesOnPickup" : [ "pickuphuntingrifle" ],
+
+    "baseOffset": [0.9, 0.0],
+    "muzzleOffset": [1.875, 0.25],
+
+    "scripts": ["/items/active/weapons/ranged/gun.lua"],
+
+    "elementalType": "physical",
+
+    "primaryAbility": {
+        "scripts": ["/items/active/weapons/other/outback_rifle/gunfire.lua"],
+        "class": "GunFire",
+
+        "fireTime": 1.0,
+		"fireTimeLerp": 0.5,
+		"fireTimeMax": 0.5,
+        "baseDps": 5,
+        "energyUsage": 10,
+        "inaccuracy": 0.008,
+
+        "projectileCount": 1,
+        "fireType": "auto",
+
+        "projectileType": "standardhuntingbullet",
+        "projectileParameters": {
+            "knockback": 20
+        },
+        "stances": {
+            "draw": {
+                "duration": 0.2,
+                "armRotation": 90,
+                "weaponRotation": 90,
+                "armAngularVelocity": -450,
+                "weaponAngularVelocity": -450,
+
+                "playSounds": ["altWindup"],
+
+                "allowRotate": false,
+                "allowFlip": true
+            },
+            "idle": {
+                "armRotation": 0,
+                "weaponRotation": 0,
+                "twoHanded": true,
+                "frontArmFrame": "run.1",
+                "backArmFrame": "swim.3",
+                "weaponOffset": [0.4, 0.15],
+                "allowRotate": true,
+                "allowFlip": true
+            },
+            "fire": {
+                "duration": 0.3,
+                "armRotation": 10,
+                "weaponRotation": 15,
+                "twoHanded": true,
+                "frontArmFrame": "run.1",
+                "backArmFrame": "swim.3",
+                "weaponOffset": [0.3, 0.15],
+                "allowRotate": true,
+                "allowFlip": false
+            },
+            "cooldown": {
+                "duration": 0.4,
+                "armRotation": -20,
+                "weaponRotation": 60,
+                "twoHanded": true,
+                "frontArmFrame": "rotation",
+                "backArmFrame": "swim.3",
+                "weaponOffset": [0.3, 0.2],
+                "playSounds": ["lever"],
+                "animationStates": {
+                    "firing": "reload"
+                },
+                "allowRotate": true,
+                "allowFlip": false
+            }
+        }
+    },
+
+    "altAbilityType": "flurry",
+    "altAbility": {
+        "name": "Flurry",
+        "type": "flurry",
+        "scripts": ["/items/active/weapons/other/outback_rifle/flurry.lua"],
+        "class": "Flurry",
+
+        "cooldownResetTime": 0.25,
+        "maxCooldownTime": 0.5,
+        "minCooldownTime": 0.3,
+        "cooldownSwingReduction": 0.04,
+
+        "energyUsage": 9.0,
+        "cooldownTime": 0.5,
+
+        "damageConfig": {
+            "damageSourceKind": "bow",
+            "statusEffects": [],
+            "baseDamage": 3,
+            "knockback": 20,
+            "timeout": 0.15,
+            "timeoutGroup": "alt"
+        },
+
+        "cycleRotationOffsets": [0, 7.5, -7.5],
+        "stances": {
+            "idle": {
+                "armRotation": -90,
+                "weaponRotation": 90,
+                "twoHanded": true,
+                "weaponOffset": [0, 0.2],
+
+                "allowRotate": true,
+                "allowFlip": true
+            },
+            "swing": {
+                "duration": 0.2,
+                "armRotation": -15,
+                "weaponRotation": 15,
+                "twoHanded": true,
+                "weaponOffset": [0.0, -0.2],
+
+                "allowRotate": false,
+                "allowFlip": false
+            }
+        }
+    },
+    "builder": "/items/buildscripts/buildunrandweapon.lua"
+}

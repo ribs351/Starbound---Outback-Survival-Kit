@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "climbingrope", "count" : 4 },
+	{ "item" : "logblock", "count" : 4 },
+    { "item" : "outback_huntersknife", "count" : 1 }
+  ],
+  "output" : { "item" : "outback_spear", "count" : 1 },
+  "groups" : [ "craftinganvil", "weapons", "all" ]
+}

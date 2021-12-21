@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "titaniumbar", "count" : 10 },
+	{ "item" : "logblock", "count" : 5 },
+    { "item" : "copperbar", "count" : 4 },
+	{ "item" : "outback_huntersknife", "count" : 1 }
+  ],
+  "output" : { "item" : "outback_huntersrifle", "count" : 1 },
+  "groups" : [ "craftinganvil", "weapons", "all" ]
+}

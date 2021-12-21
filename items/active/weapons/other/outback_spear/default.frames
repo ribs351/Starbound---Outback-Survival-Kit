@@ -1,0 +1,9 @@
+{
+  "frameGrid" : {
+    "size" : [12, 60],
+    "dimensions" : [10, 1],
+		"names" : [
+			["idle", "respawn.1", "respawn.2", "respawn.3", "respawn.4", "respawn.5", "respawn.6", "respawn.7", "respawn.8", "respawn.9"]
+		]
+  }
+}

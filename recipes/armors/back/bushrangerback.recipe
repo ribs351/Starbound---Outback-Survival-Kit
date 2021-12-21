@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "string", "count" : 10 },
+    { "item" : "fabric", "count" : 10 },
+    { "item" : "livingroot", "count" : 2 },
+	{ "item" : "cannedfood", "count" : 4 }
+  ],
+  "output" : { "item" : "bushrangerback", "count" : 1 },
+  "groups" : [ "craftinganvil", "hazardgear", "all" ]
+}

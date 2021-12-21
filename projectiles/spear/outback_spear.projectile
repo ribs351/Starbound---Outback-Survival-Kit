@@ -1,0 +1,30 @@
+{
+    "projectileName": "outback_spear",
+    "image": "outback_spear.png",
+    "flippable": true,
+    "piercing": false,
+    "physics": "underwaterarrow",
+    "speed": 170,
+    "power": 20,
+    "knockback": 10,
+    "knockbackDirectional": true,
+    "damageKind": "bow",
+    "actionOnCollide": [{
+            "action": "sound",
+            "options": ["/sfx/melee/sword_hit_metal4.ogg"],
+            "time": 0.05,
+            "repeat": false
+        }
+    ],
+    "actionOnReap": [{
+            "action": "config",
+            "file": "/projectiles/explosions/arrowexplosion/arrowexplosion.config"
+        }
+    ],
+    "statusEffects": [{
+            "effect": "paralysis",
+            "duration": 0.1
+        }
+    ],
+    "damagePoly" : [ [-12, -1], [14, -1], [14, 3], [-12, 3] ]
+}

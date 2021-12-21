@@ -1,0 +1,34 @@
+{
+    "projectileName": "outback_huntersknife",
+    "image": "outback_huntersknife.png",
+    "physics": "grenade",
+    "flippable": true,
+    "pointLight": false,
+	"orientationLocked" : true,
+    "speed": 80,
+	"actionOnCollide": [{
+            "action": "sound",
+            "options": ["/sfx/melee/sword_hit_metal3.ogg"],
+            "time": 0.05,
+            "repeat": false
+        }
+    ],
+    "actionOnReap": [{
+            "action": "config",
+            "file": "/projectiles/explosions/bulletexplosion/bulletexplosion.config"
+        }
+    ],
+    "statusEffects": [{
+            "effect": "paralysis",
+            "duration": 0.1
+        }
+    ],
+	
+    "power": 60.0,
+    "knockback": 10,
+    "knockbackDirectional": true,
+	"scripts" : [ "knifespin.lua" ],
+    "damageKind": "bow",
+    "emitters": ["daggerblue"],
+    "damagePoly": [[-2, -3], [8, -3], [8, 2], [-2, 2]]
+}
