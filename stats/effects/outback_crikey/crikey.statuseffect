@@ -1,0 +1,11 @@
+{
+	"name" : "outback_crikey",
+	"defaultDuration" : 0.2,
+	"effectConfig" : {
+		"maxPowerMultiplier" : 3
+	},
+	"scripts" : ["crikey.lua"],
+
+  "label" : "crikey",
+  "icon" : "/stats/effects/outback_crikey/crikey.png"
+}

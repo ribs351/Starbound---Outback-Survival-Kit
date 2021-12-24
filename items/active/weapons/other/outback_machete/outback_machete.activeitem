@@ -188,11 +188,11 @@
             "fire3": ["/sfx/melee/swing_shortsword.ogg"],
             "fire4": ["/sfx/melee/swing_shortsword.ogg"],
             "fire5": ["/sfx/melee/swing_shortsword.ogg"],
-            "unsheathe": ["/sfx/melee/draw_melee.ogg"]
+            "unsheathe": ["/sfx/outback/draw_melee.ogg"]
         }
     },
     "radioMessagesOnPickup": ["pickupmachete"],
-    "scripts": ["/items/active/weapons/melee/meleeweapon.lua"],
+    "scripts": ["/items/active/weapons/melee/meleeweapon.lua", "/items/active/weapons/other/outback_crikey.lua"],
 
     "elementalType": "fire",
 
@@ -509,7 +509,7 @@
         "trailInterval": 1,
         "projectileType": "firetrail",
         "projectileParameters": {
-            "processing": "?0",
+            "processing": "?multiply=0000",
             "speed": 0,
             "timeToLive": 0.01,
             "actionOnReap": [{

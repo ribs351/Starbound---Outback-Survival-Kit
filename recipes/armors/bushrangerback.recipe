@@ -5,6 +5,6 @@
     { "item" : "livingroot", "count" : 2 },
 	{ "item" : "cannedfood", "count" : 4 }
   ],
-  "output" : { "item" : "bushrangerback", "count" : 1 },
+  "output" : { "item" : "outback_bushrangerback", "count" : 1 },
   "groups" : [ "craftinganvil", "hazardgear", "all" ]
 }

@@ -208,7 +208,7 @@
     },
 
     "radioMessagesOnPickup": ["pickupknife"],
-    "scripts": ["/items/active/weapons/melee/meleeweapon.lua"],
+    "scripts": ["/items/active/weapons/melee/meleeweapon.lua", "/items/active/weapons/other/outback_crikey.lua"],
 
     "elementalType": "physical",
 
@@ -453,6 +453,7 @@
         "projectileType": "outback_huntersknife",
         "projectileOffset": [0, 1],
         "projectileParameters": {},
+				"projectileFlips" : true,
 
         "windupTime": 0.5,
         "minWindupTime": 0.4,
@@ -495,7 +496,7 @@
                 "weaponRotation": -140,
                 "twoHanded": true,
                 "frontArmFrame": "rotation",
-                "backArmFrame": "?0",
+                "backArmFrame": "?multiply=0000",
                 "weaponOffset": [-0.5, 0.5],
                 "allowRotate": false,
                 "allowFlip": false

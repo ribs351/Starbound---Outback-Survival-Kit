@@ -71,11 +71,6 @@ function ThrowSpear:windup()
 	
 	if ready and (self.energyUsage == 0 or status.overConsumeResource("energy", self.energyUsage)) then
 		self:setState(self.throw, newStance)
-	else
-		if self.winddownTime and self.winddownTime > 0 then
-			local r = timer / self.windupTime
-			self:stanceThing(newStance, "idle", self.winddownTime * r)
-		end
 	end
 end
 
@@ -91,6 +86,11 @@ function ThrowSpear:throw(stanceFrom)
   local params = copy(self.projectileParameters)
   params.power = self.baseDamage * config.getParameter("damageLevelMultiplier")
   params.powerMultiplier = activeItem.ownerPowerMultiplier()
+	
+	if self.projectileFlips and mcontroller.facingDirection() == -1 then
+		params.processing = (params.processing or "").."?flipy"
+	end
+	
 	world.spawnProjectile(self.projectileType, self:firePosition(), activeItem.ownerEntityId(), self:aimVector(), false, params)
 	
 	if self.throwTime and self.throwTime > 0 then
@@ -104,11 +104,11 @@ end
 
 
 function ThrowSpear:aimVector()
-	if self.aimForCursor then
+	if self.aimForCursor and world.gravity(mcontroller.position()) ~= 0 then
 		local pos = world.distance(activeItem.ownerAimPosition(), self:firePosition())
 		return util.aimVector(pos, self.projectileParameters.speed or self.projectileCfg.speed, self.projectileGrav, false)
 	else
-		local aimVector = vec2.rotate({0, 1}, self.weapon.aimAngle + self.weapon.relativeArmRotation)
+		local aimVector = vec2.rotate({0, 1}, self.weapon.aimAngle + self.weapon.relativeArmRotation + self.weapon.relativeWeaponRotation)
 		aimVector[1] = aimVector[1] * mcontroller.facingDirection()
 		return aimVector
 	end
