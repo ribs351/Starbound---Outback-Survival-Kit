@@ -1,5 +1,5 @@
 {
-    "projectileName": "standardhuntingbullet",
+    "projectileName": "outback_standardhuntingbullet",
     "image": "standardhuntingbullet.png",
     "physics": "laser",
     "animationCycle": 0.25,

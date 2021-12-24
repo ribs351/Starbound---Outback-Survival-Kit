@@ -263,8 +263,8 @@
         },
         "sounds": {
             "fire": ["/sfx/gun/sniper1.ogg", "/sfx/gun/sniper2.ogg", "/sfx/gun/sniper3.ogg", "/sfx/gun/sniper4.ogg"],
-            "lever": ["/sfx/gun/lever.ogg"],
-            "altWindup": ["/sfx/gun/draw.ogg"]
+            "lever": ["/sfx/outback/lever.ogg"],
+            "altWindup": ["/sfx/outback/draw.ogg"]
         }
     },
 	"radioMessagesOnPickup" : [ "pickuphuntingrifle" ],
@@ -272,7 +272,7 @@
     "baseOffset": [0.9, 0.0],
     "muzzleOffset": [1.875, 0.25],
 
-    "scripts": ["/items/active/weapons/ranged/gun.lua"],
+    "scripts": ["/items/active/weapons/ranged/gun.lua", "/items/active/weapons/other/outback_crikey.lua"],
 
     "elementalType": "physical",
 
@@ -290,7 +290,7 @@
         "projectileCount": 1,
         "fireType": "auto",
 
-        "projectileType": "standardhuntingbullet",
+        "projectileType": "outback_standardhuntingbullet",
         "projectileParameters": {
             "knockback": 20
         },

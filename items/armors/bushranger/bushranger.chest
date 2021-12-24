@@ -1,5 +1,5 @@
 {
-  "itemName" : "bushrangerchest",
+  "itemName" : "outback_bushrangerchest",
   "price" : 25,
   "inventoryIcon" : "icons.png:chest",
   "maxStack" : 1,

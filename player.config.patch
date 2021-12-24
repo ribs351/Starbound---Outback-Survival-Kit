@@ -1,8 +1,8 @@
 [
-	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "bushrangerhead" }},
-	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "bushrangerchest" }},
-	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "bushrangerlegs" }},
-	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "bushrangerback" }},
+	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_bushrangerhead" }},
+	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_bushrangerchest" }},
+	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_bushrangerlegs" }},
+	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_bushrangerback" }},
 	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_huntersknife" }},
 	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_machete" }},
 	{"op" : "add" , "path" : "/defaultBlueprints/tier1/-" , "value" : { "item" : "outback_spear" }},

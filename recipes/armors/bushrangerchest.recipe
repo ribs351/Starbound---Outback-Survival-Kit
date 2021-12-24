@@ -5,6 +5,6 @@
     { "item" : "silk", "count" : 1 }
   ],
   "duration" : 5,
-  "output" : { "item" : "bushrangerchest", "count" : 1 },
+  "output" : { "item" : "outback_bushrangerchest", "count" : 1 },
   "groups" : [ "craftinganvil2", "armours", "all" ]
 }

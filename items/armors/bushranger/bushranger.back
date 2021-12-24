@@ -1,5 +1,5 @@
 {
-  "itemName" : "bushrangerback",
+  "itemName" : "outback_bushrangerback",
   "price" : 2500,
   "inventoryIcon" : "icons.png:back",
   "rarity" : "Rare",
