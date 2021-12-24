@@ -199,7 +199,7 @@
     "primaryAbility": {
         "name": "Combo Slash",
         "type": "broadswordcombo",
-        "scripts": ["/items/active/weapons/other/outback_machete/melee.lua"],
+        "scripts": ["/items/active/weapons/other/abilities/outback_melee.lua"],
         "class": "MeleeCombo",
         "comboSteps": 5,
         "flashTime": 0.15,
@@ -207,6 +207,15 @@
         "swooshOffsetRegions": [[0.75, 0.0, 4.25, 5.0], [3.0, -0.5, 6.5, 2.0], [0.75, 0.0, 4.25, 5.0], [1.5, -1.0, 5.5, 1.0], [0.75, 0.0, 4.25, 5.0], [0.75, 0.0, 4.25, 5.0]],
         "comboSpeedFactor": 0.9,
         "edgeTriggerGrace": 0.25,
+		
+		//Tree cutting etc
+		"canCut" : true,
+		"damageForeground" : true,
+		"damageBackground" : false,
+		"considerLevel" : false, //multiplies damage per level of weapon if true
+		"tileDamageType" : "plantish",
+		"tileDamagePerSwing" : 2,
+		
         "fireTime": 0.9,
         "baseDps": 6.5,
         "damageConfig": {

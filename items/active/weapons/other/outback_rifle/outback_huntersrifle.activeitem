@@ -277,7 +277,7 @@
     "elementalType": "physical",
 
     "primaryAbility": {
-        "scripts": ["/items/active/weapons/other/outback_rifle/gunfire.lua"],
+        "scripts": ["/items/active/weapons/other/abilities/outback_gunfire.lua"],
         "class": "GunFire",
 
         "fireTime": 1.0,
@@ -350,7 +350,7 @@
     "altAbility": {
         "name": "Flurry",
         "type": "flurry",
-        "scripts": ["/items/active/weapons/other/outback_rifle/flurry.lua"],
+        "scripts": ["/items/active/weapons/other/abilities/outback_flurry.lua"],
         "class": "Flurry",
 
         "cooldownResetTime": 0.25,

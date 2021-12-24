@@ -272,7 +272,7 @@
     "primaryAbility": {
         "name": "Combo Slash",
         "type": "broadswordcombo",
-        "scripts": ["/items/active/weapons/other/outback_spear/melee.lua"],
+        "scripts": ["/items/active/weapons/other/abilities/outback_melee.lua"],
         "class": "MeleeCombo",
         "comboSteps": 8,
         "flashTime": 0.15,
@@ -685,7 +685,7 @@
     },
 
     "altAbility": {
-        "scripts": ["/items/active/weapons/other/outback_spear/throwspear.lua"],
+        "scripts": ["/items/active/weapons/other/abilities/outback_throwspear.lua"],
         "class": "ThrowSpear",
         "name": "Throw",
 
