@@ -4,7 +4,8 @@
     "flippable": true,
     "piercing": false,
     "physics": "underwaterarrow",
-    "speed": 170,
+    "timeToLive": 3,
+    "speed": 90,
     "power": 20,
     "knockback": 10,
     "knockbackDirectional": true,
@@ -26,5 +27,5 @@
             "duration": 0.1
         }
     ],
-    "damagePoly" : [ [-12, -1], [14, -1], [14, 3], [-12, 3] ]
+    "damagePoly": [[0, 0], [14, 3], [26, 0], [14, -3]]
 }

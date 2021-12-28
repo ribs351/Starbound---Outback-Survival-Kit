@@ -207,15 +207,15 @@
         "swooshOffsetRegions": [[0.75, 0.0, 4.25, 5.0], [3.0, -0.5, 6.5, 2.0], [0.75, 0.0, 4.25, 5.0], [1.5, -1.0, 5.5, 1.0], [0.75, 0.0, 4.25, 5.0], [0.75, 0.0, 4.25, 5.0]],
         "comboSpeedFactor": 0.9,
         "edgeTriggerGrace": 0.25,
-		
-		//Tree cutting etc
-		"canCut" : true,
-		"damageForeground" : true,
-		"damageBackground" : false,
-		"considerLevel" : false, //multiplies damage per level of weapon if true
-		"tileDamageType" : "plantish",
-		"tileDamagePerSwing" : 2,
-		
+
+        //Tree cutting etc
+        "canCut": true,
+        "damageForeground": true,
+        "damageBackground": false,
+        "considerLevel": false, //multiplies damage per level of weapon if true
+        "tileDamageType": "plantish",
+        "tileDamagePerSwing": 1,
+
         "fireTime": 0.9,
         "baseDps": 6.5,
         "damageConfig": {
@@ -294,8 +294,8 @@
                 "flipx": false,
                 "allowRotate": false,
                 "allowFlip": false,
-                "velocity": [45, 15],
-                "airVelocity": [15, -60]
+                "velocity": [0, 0],
+                "airVelocity": [5, 30]
             },
             "wait1": {
                 "duration": 0.2,
@@ -338,8 +338,8 @@
                 "twoHanded": false,
                 "allowRotate": false,
                 "allowFlip": false,
-                "velocity": [50, 5],
-                "airVelocity": [50, 5]
+                "velocity": [0, 0],
+                "airVelocity": [5, 30]
             },
             "wait2": {
                 "duration": 0.2,
@@ -382,8 +382,8 @@
                 "flipx": false,
                 "allowRotate": false,
                 "allowFlip": true,
-                "velocity": [-40, 5],
-                "airVelocity": [-30, -5]
+                "velocity": [0, 0],
+                "airVelocity": [5, 30]
             },
             "wait3": {
                 "duration": 0.2,
@@ -426,8 +426,8 @@
                 "flipx": true,
                 "allowRotate": false,
                 "allowFlip": false,
-                "velocity": [5, 60],
-                "airVelocity": [5, 60]
+                "velocity": [0, 0],
+                "airVelocity": [5, 30]
             },
             "wait4": {
                 "duration": 0.2,
@@ -470,19 +470,18 @@
                 "flipx": false,
                 "allowRotate": false,
                 "allowFlip": false,
-                "velocity": [45, 15],
-                "airVelocity": [15, -60]
+                "velocity": [0, 0],
+                "airVelocity": [5, 30]
             }
         }
     },
-    "altAbilityType": "traildash",
     "altAbility": {
         "stances": {
             "windup": {
                 "duration": 0.7,
                 "armRotation": 110,
                 "weaponRotation": -40,
-				"weaponOffset": [0.3, 1],
+                "weaponOffset": [0.3, 1],
                 "twoHanded": false,
                 "allowRotate": false,
                 "allowFlip": true
@@ -490,23 +489,52 @@
             "dash": {
                 "armRotation": 20,
                 "weaponRotation": -90,
-				"weaponOffset": [0.3, 1],
+                "weaponOffset": [0.3, 1],
                 "twoHanded": false,
                 "allowRotate": false,
                 "allowFlip": false
             }
         },
-        "damageConfig": {
-            "damageSourceKind": "bow",
-            "baseDamage": 10
-        },
-        "cooldownTime": 2,
+        "name": "Trail Dash",
+        "type": "traildash",
+        "scripts": ["/items/active/weapons/other/abilities/outback_traildash.lua"],
+        "class": "TrailDash",
+
+        "cooldownTime": 0.4,
         "energyUsage": 120,
 
-        "dashTime": 0.5,
-        "dashSpeed": 200,
+        "dashTime": 0.2,
+        "dashSpeed": 300,
+
+        "trailInterval": 1.0,
         "projectileOffset": [0, -1.5],
-        "trailInterval": 1,
+        "elementalConfig": {
+            "fire": {
+                "projectileType": "firetrail"
+            },
+            "ice": {
+                "projectileType": "icetrail"
+            },
+            "poison": {
+                "projectileType": "poisontrail"
+            },
+            "electric": {
+                "projectileType": "electrictrail"
+            }
+        },
+
+        "damageConfig": {
+            "damageSourceKind": "bow",
+            "statusEffects": [{
+                    "effect": "paralysis",
+                    "duration": 0.1
+                }
+            ],
+            "baseDamage": 2,
+            "knockback": 0,
+            "timeout": 0.5,
+            "timeoutGroup": "alt"
+        },
         "projectileType": "firetrail",
         "projectileParameters": {
             "processing": "?multiply=0000",

@@ -5,7 +5,7 @@
 	"flippable": false,
 	"pointLight": false,
 	"orientationLocked" : true,
-	"timeToLive" : 20,
+	"timeToLive" : 3,
 	"speed": 80,
 	"actionOnCollide": [{
 		"action": "sound",

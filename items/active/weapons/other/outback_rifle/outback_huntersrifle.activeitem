@@ -9,13 +9,13 @@
     "level": 5,
     "tooltipKind": "base",
     "category": "^green;Bushmen",
-    "itemTags": ["weapon", "ranged", "rifle"],
+    "itemTags": ["weapon", "ranged", "rifle","upgradeableWeapon"],
     "twoHanded": true,
 
     "animation": "/items/active/weapons/ranged/gun.animation",
     "animationParts": {
         "butt": "",
-        "middle": "outback_huntersrifle.png:cock.1",
+        "middle": "outback_huntersrifle.png",
         "barrel": "",
         "blade": "",
         "handle": "",
@@ -68,7 +68,7 @@
                 "middle": {
                     "properties": {
                         "centered": true,
-                        "image": "outback_huntersrifle.png:cock.1",
+                        "image": "<partImage>:cock.1",
                         "offset": [0, 0], // x offset is set dynamically
                         "transformationGroups": ["weapon"]
                     },
@@ -76,7 +76,7 @@
                         "firing": {
                             "reload": {
                                 "properties": {
-                                    "image": "outback_huntersrifle.png:cock.<frame>"
+                                    "image": "<partImage>:cock.<frame>"
                                 }
                             }
                         }
@@ -262,7 +262,7 @@
             }
         },
         "sounds": {
-            "fire": ["/sfx/gun/sniper1.ogg", "/sfx/gun/sniper2.ogg", "/sfx/gun/sniper3.ogg", "/sfx/gun/sniper4.ogg"],
+            "fire": ["/sfx/outback/gun/rifle1.ogg", "/sfx/outback/gun/rifle2.ogg", "/sfx/outback/gun/rifle3.ogg", "/sfx/outback/gun/rifle4.ogg"],
             "lever": ["/sfx/outback/lever.ogg"],
             "altWindup": ["/sfx/outback/draw.ogg"]
         }
@@ -270,7 +270,7 @@
 	"radioMessagesOnPickup" : [ "pickuphuntingrifle" ],
 
     "baseOffset": [0.9, 0.0],
-    "muzzleOffset": [1.875, 0.25],
+    "muzzleOffset": [1.7, 0.6],
 
     "scripts": ["/items/active/weapons/ranged/gun.lua", "/items/active/weapons/other/outback_crikey.lua"],
 
@@ -292,7 +292,8 @@
 
         "projectileType": "outback_standardhuntingbullet",
         "projectileParameters": {
-            "knockback": 20
+            "knockback": 20,
+			"speed": 500
         },
         "stances": {
             "draw": {
@@ -393,5 +394,89 @@
             }
         }
     },
-    "builder": "/items/buildscripts/buildunrandweapon.lua"
+    "builder": "/items/buildscripts/buildunrandweapon.lua",
+
+  "upgradeParameters" : {
+    "inventoryIcon": "outback_huntersrifle_l6.png:cock.1",
+    "animationParts" : {
+	  "middle": "outback_huntersrifle_l6.png"
+    },
+	"animationCustom":{
+		"sounds":{
+			"fire": ["/sfx/outback/gun/shotgun1.ogg", "/sfx/outback/gun/shotgun2.ogg"]
+		}
+	},
+	"description": "I'll be back.",
+    "shortdescription" : "Judgement ^yellow;^reset;",
+	"primaryAbility": {
+        "scripts": ["/items/active/weapons/other/abilities/outback_gunfire.lua"],
+        "class": "GunFire",
+
+        "fireTime": 1.0,
+		"fireTimeLerp": 0.5,
+		"fireTimeMax": 0.5,
+        "baseDps": 5,
+        "energyUsage": 10,
+        "inaccuracy": 0.05,
+
+        "projectileCount": 5,
+        "fireType": "auto",
+
+        "projectileType": "outback_standardhuntingbullet",
+        "projectileParameters": {
+            "knockback": 20,
+			"speed": 500
+        },
+        "stances": {
+            "draw": {
+                "duration": 0.2,
+                "armRotation": 90,
+                "weaponRotation": 90,
+                "armAngularVelocity": -450,
+                "weaponAngularVelocity": -450,
+
+                "playSounds": ["altWindup"],
+
+                "allowRotate": false,
+                "allowFlip": true
+            },
+            "idle": {
+                "armRotation": 0,
+                "weaponRotation": 0,
+                "twoHanded": true,
+                "frontArmFrame": "run.1",
+                "backArmFrame": "swim.3",
+                "weaponOffset": [0.4, 0.15],
+                "allowRotate": true,
+                "allowFlip": true
+            },
+            "fire": {
+                "duration": 0.3,
+                "armRotation": 10,
+                "weaponRotation": 15,
+                "twoHanded": true,
+                "frontArmFrame": "run.1",
+                "backArmFrame": "swim.3",
+                "weaponOffset": [0.3, 0.15],
+                "allowRotate": true,
+                "allowFlip": false
+            },
+            "cooldown": {
+                "duration": 0.4,
+                "armRotation": -20,
+                "weaponRotation": 60,
+                "twoHanded": true,
+                "frontArmFrame": "rotation",
+                "backArmFrame": "swim.3",
+                "weaponOffset": [0.3, 0.2],
+                "playSounds": ["lever"],
+                "animationStates": {
+                    "firing": "reload"
+                },
+                "allowRotate": true,
+                "allowFlip": false
+            }
+        }
+    }
+  }
 }

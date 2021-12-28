@@ -441,9 +441,9 @@
         "class": "ThrowSpear",
         "name": "Throw",
 
-        "fireTime": 0,
-        "baseDamage": 10,
-        "energyUsage": 30,
+        "fireTime": 1,
+        "baseDamage": 7,
+        "energyUsage": 90,
 
         "autoThrow": false,
         "forceWalk": false,

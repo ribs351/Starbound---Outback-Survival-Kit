@@ -6,6 +6,6 @@
 	},
 	"scripts" : ["crikey.lua"],
 
-  "label" : "crikey",
+  "label" : "Crikey!",
   "icon" : "/stats/effects/outback_crikey/crikey.png"
 }
