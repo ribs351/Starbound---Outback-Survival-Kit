@@ -5,9 +5,6 @@
   "includes" : ["Wardrobe"],
   "link" : "steam://url/CommunityFilePage/2698975190",
   "name" : "outbackkit",
-  "includes": [
-    "Wardrobe"
-  ],
   "steamContentId" : "2698975190",
   "tags" : "Weapons|Armor and Clothes",
   "version" : "1.0.2"
